@@ -12,14 +12,8 @@ class Animal {
         this.collar = collar;
         this.leash = leash;
     }
-    boolean isCollar(){
-        return collar;
-    }
-    boolean isLeash(){
-        return leash;
-    }
     void walking() throws MyException {
-        if (isLeash() && isCollar())
+        if (leash && collar)
             System.out.println("Выгул");
         else
             throw new MyException("Не вся экипировка");
